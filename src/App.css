@@ -1,0 +1,170 @@
+/* Set up a full-screen background */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Serithai', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  --width: 393px;
+  --height: 659px;
+  background-color: #f0f0f0;
+}
+
+/* Container for the camera interface */
+.camera-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--width);
+  height: var(--height);
+  border: none;
+  overflow: hidden;
+}
+
+/* The actual camera view part */
+/* Styles for the camera view and layout */
+.camera-view {
+  width: calc(var(--width) * 0.9);
+  /* max-width: 1179px; */
+  height:  calc(var(--height) * 0.9);
+  background-color: #eaeaea;
+  position: relative;
+  border-radius: 30px;
+  border: none;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+/* Info Overlay styling */
+.info-overlay {
+  position: absolute;
+  top: 0;
+  width: calc(var(--width) * 0.9);
+  height: calc(var(--height) * 0.9);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+h2 {
+  line-height: 0.5;
+  padding-top: 10px;
+}
+
+.info-content {
+  padding: 20px;
+}
+
+
+.appearance {
+  opacity: 0.75;
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.details div {
+  font-size: 1.2rem;
+}
+
+.snake-img {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+svg {
+  padding-right: 5px;
+}
+
+.back-button {
+  font-size: 16px;
+  display: flex;
+  padding: 10px 0px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.subtitle {
+  opacity: 0.5;
+}
+
+.button-container {
+  position: absolute;
+  top: calc(var(--height) - 120px);
+  border: none;
+  border-radius: 0%;
+  width: 300px;
+  justify-content: left;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.upload-button {
+  width: 100px;
+  background-color: rgba(153, 79, 79, 0);
+  justify-content: left;
+  border: none;
+  cursor: pointer;
+}
+
+/* Camera capture button */
+.capture-button {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-right: 20px
+}
+
+.capture-button:hover {
+  opacity: 0.75;
+}
+
+.capture-button:before {
+  content: '';
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+
+/* ---------------------- font ---------------------- */
+
+
+@font-face {
+  font-family: 'Serithai';
+  src: url(./assets/font/SerithaiExpanded-Bold.ttf) format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Serithai';
+  src: url(./assets/font/SerithaiExpanded-Medium.ttf) format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
